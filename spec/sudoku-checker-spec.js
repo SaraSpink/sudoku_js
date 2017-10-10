@@ -47,4 +47,16 @@ describe('rowChecker', function() {
       expect(reusableSudoku.rowChecker(user_input)).toEqual(false);
     });
 });
-// ["1", "9", "5", "6", "7", "8", "2", "3", "4"]
+describe('columnChecker', function() {
+  var reusableSudoku;
+
+  beforeEach(function() {
+    reusableSudoku = new Sudoku();
+  });
+
+    it('checks if column user input matches winning set', function() {
+      var user_input = [["1"], ["2"], ["3"], ["4"], ["5"], ["6"], ["7"], ["8"], ["9"]]
+      expect(reusableSudoku.rowChecker(user_input)).toEqual(true);
+    });
+
+});
