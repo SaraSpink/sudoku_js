@@ -32,8 +32,19 @@ describe('rowChecker', function() {
   });
 
     it('checks if user input matches winning set', function() {
-      var user_input = ["1", "2", "3", "4", "5", "6", "7", "8", "9"]
+      var user_input = [["1", "2", "3", "4", "5", "6", "7", "8", "9"], ["1", "2", "3", "4", "5", "6", "7", "8", "9"]]
       expect(reusableSudoku.rowChecker(user_input)).toEqual(true);
+    });
+
+    it('checks if user input matches winning set in any order', function() {
+      var user_input = [["1", "2", "3", "4", "5", "6", "7", "8", "9"], ["4", "5", "6", "1", "2", "3", "7", "8", "9"]]
+      expect(reusableSudoku.rowChecker(user_input)).toEqual(true);
+    });
+
+
+    it('checks if user input has any repeat variables', function() {
+      var user_input = [["2", "2", "3", "4", "5", "6", "7", "8", "9"], ["4", "2", "4", "4", "5", "6", "7", "8", "9"]]
+      expect(reusableSudoku.rowChecker(user_input)).toEqual(false);
     });
 });
 // ["1", "9", "5", "6", "7", "8", "2", "3", "4"]
