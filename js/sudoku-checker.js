@@ -48,7 +48,7 @@ function Sudoku() {
     for (var i = 0; i < 8; i++) {
       var array = matrix[i];
       for (var j = 0; j < 8; j++) {
-        column.push(matrix[i][j])
+        column.push(array[j])
         // col[i] = [ [row[0], ], ]
         if ((column.sort().toString()) !== (winningSet.toString())) {
           return false;

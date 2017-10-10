@@ -47,6 +47,7 @@ describe('rowChecker', function() {
       expect(reusableSudoku.rowChecker(user_input)).toEqual(false);
     });
 });
+
 describe('columnChecker', function() {
   var reusableSudoku;
 
